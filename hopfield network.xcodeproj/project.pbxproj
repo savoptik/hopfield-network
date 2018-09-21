@@ -13,6 +13,7 @@
 		FEAC6604215528620027A439 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAC6600215528620027A439 /* libopencv_imgcodecs.3.4.1.dylib */; };
 		FEAC6605215528620027A439 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAC6601215528620027A439 /* libopencv_imgproc.3.4.1.dylib */; };
 		FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC660B21552ECB0027A439 /* matrix.cpp */; };
+		FEAC661221553DB90027A439 /* dataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC661021553DB90027A439 /* dataSet.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,18 @@
 		FEAC6601215528620027A439 /* libopencv_imgproc.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.4.1.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.1_5/lib/libopencv_imgproc.3.4.1.dylib; sourceTree = "<group>"; };
 		FEAC660B21552ECB0027A439 /* matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cpp; sourceTree = "<group>"; };
 		FEAC660C21552ECB0027A439 /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
+		FEAC661021553DB90027A439 /* dataSet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dataSet.cpp; sourceTree = "<group>"; };
+		FEAC661121553DB90027A439 /* dataSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dataSet.hpp; sourceTree = "<group>"; };
+		FEAC661D21554A6C0027A439 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		FEAC661E21554A6D0027A439 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		FEAC661F21554A6D0027A439 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		FEAC662021554A6D0027A439 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		FEAC662121554A6E0027A439 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		FEAC662221554A6E0027A439 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		FEAC662321554A6E0027A439 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		FEAC662421554A6F0027A439 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		FEAC662521554A6F0027A439 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		FEAC662621554A700027A439 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				FEAC65F6215526660027A439 /* main.cpp */,
+				FEAC660F21553D780027A439 /* dataSet */,
 				FEAC660A21552E8A0027A439 /* matrix */,
 				FEAC6606215528BA0027A439 /* resursis */,
 			);
@@ -103,6 +117,16 @@
 		FEAC6607215529A40027A439 /* DataTren */ = {
 			isa = PBXGroup;
 			children = (
+				FEAC662621554A700027A439 /* 0.jpg */,
+				FEAC662121554A6E0027A439 /* 1.jpg */,
+				FEAC661F21554A6D0027A439 /* 2.jpg */,
+				FEAC662521554A6F0027A439 /* 3.jpg */,
+				FEAC661E21554A6D0027A439 /* 4.jpg */,
+				FEAC662221554A6E0027A439 /* 5.jpg */,
+				FEAC662021554A6D0027A439 /* 6.jpg */,
+				FEAC662321554A6E0027A439 /* 7.jpg */,
+				FEAC662421554A6F0027A439 /* 8.jpg */,
+				FEAC661D21554A6C0027A439 /* 9.jpg */,
 			);
 			path = DataTren;
 			sourceTree = "<group>";
@@ -121,6 +145,15 @@
 				FEAC660C21552ECB0027A439 /* matrix.hpp */,
 			);
 			path = matrix;
+			sourceTree = "<group>";
+		};
+		FEAC660F21553D780027A439 /* dataSet */ = {
+			isa = PBXGroup;
+			children = (
+				FEAC661021553DB90027A439 /* dataSet.cpp */,
+				FEAC661121553DB90027A439 /* dataSet.hpp */,
+			);
+			path = dataSet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +214,7 @@
 			files = (
 				FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */,
 				FEAC65F7215526660027A439 /* main.cpp in Sources */,
+				FEAC661221553DB90027A439 /* dataSet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
