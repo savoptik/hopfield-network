@@ -14,6 +14,7 @@
 		FEAC6605215528620027A439 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAC6601215528620027A439 /* libopencv_imgproc.3.4.1.dylib */; };
 		FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC660B21552ECB0027A439 /* matrix.cpp */; };
 		FEAC661221553DB90027A439 /* dataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC661021553DB90027A439 /* dataSet.cpp */; };
+		FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC6628215552250027A439 /* imageDataSet.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,8 @@
 		FEAC662421554A6F0027A439 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		FEAC662521554A6F0027A439 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		FEAC662621554A700027A439 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		FEAC6628215552250027A439 /* imageDataSet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = imageDataSet.cpp; sourceTree = "<group>"; };
+		FEAC6629215552250027A439 /* imageDataSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = imageDataSet.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +153,20 @@
 		FEAC660F21553D780027A439 /* dataSet */ = {
 			isa = PBXGroup;
 			children = (
+				FEAC6627215551E80027A439 /* imageDataSet */,
 				FEAC661021553DB90027A439 /* dataSet.cpp */,
 				FEAC661121553DB90027A439 /* dataSet.hpp */,
 			);
 			path = dataSet;
+			sourceTree = "<group>";
+		};
+		FEAC6627215551E80027A439 /* imageDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				FEAC6628215552250027A439 /* imageDataSet.cpp */,
+				FEAC6629215552250027A439 /* imageDataSet.hpp */,
+			);
+			path = imageDataSet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +227,7 @@
 			files = (
 				FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */,
 				FEAC65F7215526660027A439 /* main.cpp in Sources */,
+				FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */,
 				FEAC661221553DB90027A439 /* dataSet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,6 @@
 dataSet::dataSet(std::string dirPath) { 
     auto folder = opendir(dirPath.data());
     struct dirent *entry;
-    std::cout << dirPath << std::endl;
     while ((entry = readdir(folder)) != NULL) {
         if (nameVerification(entry->d_name) == 1) {
             fileNames.push_back(entry->d_name);

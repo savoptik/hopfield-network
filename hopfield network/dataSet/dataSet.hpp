@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <vector>
-#include <opencv2/opencv.hpp>
 #include <string>
 
 class dataSet {
