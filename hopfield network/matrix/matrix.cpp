@@ -8,13 +8,12 @@
 
 #include "matrix.hpp"
 
-
 std::vector<int> &matrix::data() { 
     return matrixInLine;
 }
 
 int &matrix::at(int i, int j) {
-    int index = i * mWits + j;
+    int index = i * mWits + j; // вычисление линейного индекса по координатам.
     return matrixInLine[index];
 }
 
