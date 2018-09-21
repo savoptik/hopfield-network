@@ -12,7 +12,9 @@ imageDataSet::imageDataSet(std::string dirPath, dataSet ds) {
     setImages.resize(ds.getFileList().size());
     for (int i = 0; i < ds.getFileList().size(); i++) {
         std::string filePath = dirPath + ds.getFileList()[i];
-        setImages[i] = cv::imread(filePath, cv::IMREAD_GRAYSCALE);
+        cv::Mat img = cv::imread(filePath, cv::IMREAD_GRAYSCALE);
+        cv::threshold(img, img, 128, 255, cv::THRESH_OTSU);
+        setImages[i] = img;
     }
 }
 
