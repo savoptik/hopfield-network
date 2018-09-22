@@ -55,6 +55,16 @@
 		FEAC6629215552250027A439 /* imageDataSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = imageDataSet.hpp; sourceTree = "<group>"; };
 		FEAC662D215648040027A439 /* wMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wMatrix.cpp; sourceTree = "<group>"; };
 		FEAC662E215648040027A439 /* wMatrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = wMatrix.hpp; sourceTree = "<group>"; };
+		FEAC663021565D660027A439 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		FEAC663121565D660027A439 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		FEAC663221565D660027A439 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		FEAC663321565D660027A439 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		FEAC663421565D660027A439 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		FEAC663521565D660027A439 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		FEAC663621565D660027A439 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		FEAC663721565D660027A439 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		FEAC663821565D660027A439 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		FEAC663921565D660027A439 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,16 @@
 		FEAC660921552A330027A439 /* dataTest */ = {
 			isa = PBXGroup;
 			children = (
+				FEAC663121565D660027A439 /* 0.jpg */,
+				FEAC663321565D660027A439 /* 1.jpg */,
+				FEAC663421565D660027A439 /* 2.jpg */,
+				FEAC663021565D660027A439 /* 3.jpg */,
+				FEAC663521565D660027A439 /* 4.jpg */,
+				FEAC663921565D660027A439 /* 5.jpg */,
+				FEAC663221565D660027A439 /* 6.jpg */,
+				FEAC663621565D660027A439 /* 7.jpg */,
+				FEAC663721565D660027A439 /* 8.jpg */,
+				FEAC663821565D660027A439 /* 9.jpg */,
 			);
 			path = dataTest;
 			sourceTree = "<group>";
