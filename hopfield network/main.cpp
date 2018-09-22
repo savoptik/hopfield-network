@@ -7,10 +7,7 @@
 //
 
 #include <iostream>
-#include "dataSet/dataSet.hpp"
-#include "dataSet/imageDataSet/imageDataSet.hpp"
-#include "matrix/w_matrix/wMatrix.hpp"
-#include "distorted_signal/distortedSignal.hpp"
+#include "neuronet//neuronet.hpp"
 
 int main(int argc, const char * argv[]) {
 

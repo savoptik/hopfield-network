@@ -17,6 +17,7 @@
 		FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC6628215552250027A439 /* imageDataSet.cpp */; };
 		FEAC662F215648040027A439 /* wMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC662D215648040027A439 /* wMatrix.cpp */; };
 		FEAC663D21565EA60027A439 /* distortedSignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC663B21565EA60027A439 /* distortedSignal.cpp */; };
+		FEAC664221566FF30027A439 /* neuronet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC664021566FF30027A439 /* neuronet.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,8 @@
 		FEAC663921565D660027A439 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		FEAC663B21565EA60027A439 /* distortedSignal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = distortedSignal.cpp; sourceTree = "<group>"; };
 		FEAC663C21565EA60027A439 /* distortedSignal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = distortedSignal.hpp; sourceTree = "<group>"; };
+		FEAC664021566FF30027A439 /* neuronet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = neuronet.cpp; sourceTree = "<group>"; };
+		FEAC664121566FF30027A439 /* neuronet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = neuronet.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FEAC65F6215526660027A439 /* main.cpp */,
+				FEAC663F21566FC60027A439 /* neuronet */,
 				FEAC663A21565E770027A439 /* distorted_signal */,
 				FEAC660F21553D780027A439 /* dataSet */,
 				FEAC660A21552E8A0027A439 /* matrix */,
@@ -128,6 +132,7 @@
 		FEAC6606215528BA0027A439 /* resursis */ = {
 			isa = PBXGroup;
 			children = (
+				FEAC663E21566F150027A439 /* results */,
 				FEAC660921552A330027A439 /* dataTest */,
 				FEAC6607215529A40027A439 /* DataTren */,
 			);
@@ -215,6 +220,22 @@
 			path = distorted_signal;
 			sourceTree = "<group>";
 		};
+		FEAC663E21566F150027A439 /* results */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = results;
+			sourceTree = "<group>";
+		};
+		FEAC663F21566FC60027A439 /* neuronet */ = {
+			isa = PBXGroup;
+			children = (
+				FEAC664021566FF30027A439 /* neuronet.cpp */,
+				FEAC664121566FF30027A439 /* neuronet.hpp */,
+			);
+			path = neuronet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +294,7 @@
 			files = (
 				FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */,
 				FEAC65F7215526660027A439 /* main.cpp in Sources */,
+				FEAC664221566FF30027A439 /* neuronet.cpp in Sources */,
 				FEAC663D21565EA60027A439 /* distortedSignal.cpp in Sources */,
 				FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */,
 				FEAC661221553DB90027A439 /* dataSet.cpp in Sources */,
