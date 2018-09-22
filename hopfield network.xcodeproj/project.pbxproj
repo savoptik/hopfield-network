@@ -15,6 +15,7 @@
 		FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC660B21552ECB0027A439 /* matrix.cpp */; };
 		FEAC661221553DB90027A439 /* dataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC661021553DB90027A439 /* dataSet.cpp */; };
 		FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC6628215552250027A439 /* imageDataSet.cpp */; };
+		FEAC662F215648040027A439 /* wMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC662D215648040027A439 /* wMatrix.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		FEAC662621554A700027A439 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		FEAC6628215552250027A439 /* imageDataSet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = imageDataSet.cpp; sourceTree = "<group>"; };
 		FEAC6629215552250027A439 /* imageDataSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = imageDataSet.hpp; sourceTree = "<group>"; };
+		FEAC662D215648040027A439 /* wMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wMatrix.cpp; sourceTree = "<group>"; };
+		FEAC662E215648040027A439 /* wMatrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = wMatrix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,7 @@
 		FEAC660A21552E8A0027A439 /* matrix */ = {
 			isa = PBXGroup;
 			children = (
+				FEAC662C215647D80027A439 /* w_matrix */,
 				FEAC660B21552ECB0027A439 /* matrix.cpp */,
 				FEAC660C21552ECB0027A439 /* matrix.hpp */,
 			);
@@ -167,6 +171,15 @@
 				FEAC6629215552250027A439 /* imageDataSet.hpp */,
 			);
 			path = imageDataSet;
+			sourceTree = "<group>";
+		};
+		FEAC662C215647D80027A439 /* w_matrix */ = {
+			isa = PBXGroup;
+			children = (
+				FEAC662D215648040027A439 /* wMatrix.cpp */,
+				FEAC662E215648040027A439 /* wMatrix.hpp */,
+			);
+			path = w_matrix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +242,7 @@
 				FEAC65F7215526660027A439 /* main.cpp in Sources */,
 				FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */,
 				FEAC661221553DB90027A439 /* dataSet.cpp in Sources */,
+				FEAC662F215648040027A439 /* wMatrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

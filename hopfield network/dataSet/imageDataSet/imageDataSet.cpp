@@ -29,10 +29,10 @@ matrix &imageDataSet::getInlineMatrix() {
 
 void imageDataSet::generaitInLineForm() { 
     int ilfIndex = 0;
-    matrix ilfMatrix(setImages.size(), setImages[0].rows * setImages[0].cols);
+    matrix ilfMatrix(static_cast<int>(setImages.size()), setImages[0].rows * setImages[0].cols);
     for (int i = 0; i < setImages.size(); i++) {
         for (int j = 0; j < (setImages[i].rows * setImages[i].cols); j++) {
-            if (setImages[i].at<uchar>(j) == 0) ilfMatrix.data()[ilfIndex] == -1;
+            if (setImages[i].at<uchar>(j) == 0) ilfMatrix.data()[ilfIndex] = -1;
             else ilfMatrix.data()[ilfIndex] = 1;
             ilfIndex++;
         }
