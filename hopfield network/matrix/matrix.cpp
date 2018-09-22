@@ -35,3 +35,8 @@ matrix::matrix(int rows, int cols) {
     mSize = mHaid * mWits;
     matrixInLine.resize(mSize);
 }
+
+matrix::~matrix() { 
+    matrixInLine.~vector();
+}
+

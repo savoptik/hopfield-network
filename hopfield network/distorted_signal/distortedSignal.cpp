@@ -40,3 +40,9 @@ void distortedSignal::toDistortTheSignal() {
     }
 }
 
+distortedSignal::~distortedSignal() { 
+    matrixInLineInBipolarForm.clear();
+    matrixInLineInBipolarForm.~vector();
+}
+
+

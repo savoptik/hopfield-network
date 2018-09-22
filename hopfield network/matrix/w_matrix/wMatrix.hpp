@@ -14,6 +14,7 @@
 
 class wMatrix: public matrix {
 public:
+    wMatrix() {}
     wMatrix(matrix &xMatrix); // принимает матрицу x, создаёт по нему квадратную матрицу.
     /**
      метод создаёт w матрицу.
@@ -21,6 +22,7 @@ public:
     void generaitWMatrix();
     double& at( int i, int j);
     std::vector<double>& data();
+    ~wMatrix();
 private:
     std::vector<double> matrixInLine;
     matrix xMat;

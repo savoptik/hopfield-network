@@ -7,3 +7,12 @@
 //
 
 #include "neuronet.hpp"
+
+neuronet::neuronet(matrix &xMat, wMatrix &wMat, distortedSignal &dSignal) { 
+    xm = xMat;
+    xMat.~matrix();
+    wm = wMat;
+    wMat.~wMatrix();
+    ds = dSignal;
+    dSignal.~distortedSignal();
+}

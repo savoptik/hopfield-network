@@ -41,3 +41,9 @@ double &wMatrix::at(int i, int j) {
     int index = i* mWits + j;
     return matrixInLine[index];
 }
+
+wMatrix::~wMatrix() { 
+    matrixInLine.~vector();
+    xMat.~matrix();
+}
+
