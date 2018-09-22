@@ -16,6 +16,7 @@
 		FEAC661221553DB90027A439 /* dataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC661021553DB90027A439 /* dataSet.cpp */; };
 		FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC6628215552250027A439 /* imageDataSet.cpp */; };
 		FEAC662F215648040027A439 /* wMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC662D215648040027A439 /* wMatrix.cpp */; };
+		FEAC663D21565EA60027A439 /* distortedSignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC663B21565EA60027A439 /* distortedSignal.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,8 @@
 		FEAC663721565D660027A439 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		FEAC663821565D660027A439 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		FEAC663921565D660027A439 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		FEAC663B21565EA60027A439 /* distortedSignal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = distortedSignal.cpp; sourceTree = "<group>"; };
+		FEAC663C21565EA60027A439 /* distortedSignal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = distortedSignal.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				FEAC65F6215526660027A439 /* main.cpp */,
+				FEAC663A21565E770027A439 /* distorted_signal */,
 				FEAC660F21553D780027A439 /* dataSet */,
 				FEAC660A21552E8A0027A439 /* matrix */,
 				FEAC6606215528BA0027A439 /* resursis */,
@@ -202,6 +206,15 @@
 			path = w_matrix;
 			sourceTree = "<group>";
 		};
+		FEAC663A21565E770027A439 /* distorted_signal */ = {
+			isa = PBXGroup;
+			children = (
+				FEAC663B21565EA60027A439 /* distortedSignal.cpp */,
+				FEAC663C21565EA60027A439 /* distortedSignal.hpp */,
+			);
+			path = distorted_signal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +273,7 @@
 			files = (
 				FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */,
 				FEAC65F7215526660027A439 /* main.cpp in Sources */,
+				FEAC663D21565EA60027A439 /* distortedSignal.cpp in Sources */,
 				FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */,
 				FEAC661221553DB90027A439 /* dataSet.cpp in Sources */,
 				FEAC662F215648040027A439 /* wMatrix.cpp in Sources */,

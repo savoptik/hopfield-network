@@ -10,6 +10,7 @@
 #include "dataSet/dataSet.hpp"
 #include "dataSet/imageDataSet/imageDataSet.hpp"
 #include "matrix/w_matrix/wMatrix.hpp"
+#include "distorted_signal/distortedSignal.hpp"
 
 int main(int argc, const char * argv[]) {
 
@@ -21,11 +22,7 @@ int main(int argc, const char * argv[]) {
     wMatrix wm(ids.getInlineMatrix());
     wm.generaitWMatrix();
     std::cout << "получена матрица размером" << wm.rows() << ":" << wm.cols() << " содержащая " << wm.size() << " элементов" << std::endl;
-    for (int i = 0; i < 20; i++) {
-        for (int j = 0; j < 200; j++) {
-            std::cout << wm.at(i, j) << " ";
-        }
-        std::cout << std::endl;
-    }
+    distortedSignal dSignal(argv[2]);
+    dSignal.toDistortTheSignal();
     return 0;
 }
