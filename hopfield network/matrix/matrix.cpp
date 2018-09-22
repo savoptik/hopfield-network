@@ -29,9 +29,11 @@ int matrix::size() {
     return mSize;
 }
 
-matrix::matrix(int rows, int cols) { 
+matrix::matrix(int rows, int cols) {
+    // записываем все измерения матрицы
     mHaid =  rows;
     mWits = cols;
     mSize = mHaid * mWits;
+    // выделяем память
     matrixInLine.resize(mSize);
 }

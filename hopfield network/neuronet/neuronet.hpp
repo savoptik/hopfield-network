@@ -22,6 +22,12 @@ public:
      Запуск работы нейросети.
      */
     void ranNV(); // выполнить восстановление
+    /**
+     метод пишет получившееся изображение на диск
+
+     @param dirPath путь к папке с результатами
+     */
+    void exportresult(std::string dirPath);
 private:
     matrix xm; // x матрица
     wMatrix wm; // w Матрица
