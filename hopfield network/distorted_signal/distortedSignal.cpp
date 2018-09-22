@@ -45,4 +45,9 @@ distortedSignal::~distortedSignal() {
     matrixInLineInBipolarForm.~vector();
 }
 
+std::vector<int> &distortedSignal::data() { 
+    return matrixInLineInBipolarForm;
+}
+
+
 

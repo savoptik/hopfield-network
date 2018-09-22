@@ -19,7 +19,10 @@ int main(int argc, const char * argv[]) {
     wMatrix wm(ids.getInlineMatrix());
     wm.generaitWMatrix();
     std::cout << "получена матрица размером" << wm.rows() << ":" << wm.cols() << " содержащая " << wm.size() << " элементов" << std::endl;
-    distortedSignal dSignal(argv[2]);
-    dSignal.toDistortTheSignal();
+//    distortedSignal dSignal(argv[2]);
+//    dSignal.toDistortTheSignal();
+//    matrix xm = ids.getInlineMatrix();
+//    neuronet nt(xm, wm, dSignal);
+//    nt.ranNV();
     return 0;
 }
