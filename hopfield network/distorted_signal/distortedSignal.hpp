@@ -27,7 +27,6 @@ public:
      метод искажает сигнал добавляя 1 и -1 через случайные промежутки.
      */
     void toDistortTheSignal(); // метод искажает сигнал.
-    ~distortedSignal();
 private:
     std::vector<int> matrixInLineInBipolarForm;
 };

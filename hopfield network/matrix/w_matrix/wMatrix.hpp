@@ -22,7 +22,6 @@ public:
     void generaitWMatrix();
     double& at( int i, int j);
     std::vector<double>& data();
-    ~wMatrix();
 private:
     std::vector<double> matrixInLine;
     matrix xMat;

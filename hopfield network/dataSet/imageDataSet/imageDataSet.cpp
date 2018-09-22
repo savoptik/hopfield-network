@@ -24,7 +24,7 @@ std::vector<cv::Mat> &imageDataSet::getImageSet() {
 }
 
 matrix &imageDataSet::getInlineMatrix() { 
-    return mat;
+    return xMat;
 }
 
 void imageDataSet::generaitInLineForm() { 
@@ -37,7 +37,7 @@ void imageDataSet::generaitInLineForm() {
             ilfIndex++;
         }
     }
-    mat = ilfMatrix;
+    xMat = ilfMatrix;
 }
 
 

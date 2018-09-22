@@ -40,11 +40,6 @@ void distortedSignal::toDistortTheSignal() {
     }
 }
 
-distortedSignal::~distortedSignal() { 
-    matrixInLineInBipolarForm.clear();
-    matrixInLineInBipolarForm.~vector();
-}
-
 std::vector<int> &distortedSignal::data() { 
     return matrixInLineInBipolarForm;
 }

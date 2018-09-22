@@ -42,8 +42,3 @@ double &wMatrix::at(int i, int j) {
     return matrixInLine[index];
 }
 
-wMatrix::~wMatrix() { 
-    matrixInLine.~vector();
-    xMat.~matrix();
-}
-

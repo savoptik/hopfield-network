@@ -36,7 +36,7 @@ public:
     void generaitInLineForm();
 private:
     std::vector<cv::Mat> setImages;
-    matrix mat;
+    matrix xMat;
 };
 
 #endif /* imageDataSet_hpp */
