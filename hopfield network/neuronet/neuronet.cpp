@@ -35,7 +35,7 @@ int neuronet::ToObtainThePercentageOfMatches(std::vector<double> y_prev, std::ve
     std::vector<int> v1 = convertToBiPolarVector(y_prev);
     std::vector<int> v2 = convertToBiPolarVector(y_t);
     for (int i = 0; i < y_prev.size(); i++) { // проходим вдоль векторов
-        coincidences = v1[i] == v2[i]? coincidences++: coincidences; // считаем совпадения
+        coincidences = v1[i] == v2[i]? coincidences+1: coincidences; // считаем совпадения
     }
     return coincidences * 100 / y_t.size(); // возвращаем в процентах
 }
@@ -71,7 +71,7 @@ void neuronet::ranNV() {
 }
 
 void neuronet::exportresult(std::string dirPath) { 
-    cv::Mat img(xm.rows(), xm.cols(), CV_8UC1);
+    cv::Mat img(10, 10, CV_8UC1);
     // заполняем матрицу изображения
     for (int i = 0; i < img.rows * img.cols; i++) {
         if (xm.data()[i] > 0) {
