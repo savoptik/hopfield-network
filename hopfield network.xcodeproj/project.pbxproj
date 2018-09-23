@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		FEAC65F7215526660027A439 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC65F6215526660027A439 /* main.cpp */; };
-		FEAC6602215528620027A439 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAC65FE215528620027A439 /* libopencv_core.3.4.1.dylib */; };
-		FEAC6603215528620027A439 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAC65FF215528620027A439 /* libopencv_highgui.3.4.1.dylib */; };
-		FEAC6604215528620027A439 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAC6600215528620027A439 /* libopencv_imgcodecs.3.4.1.dylib */; };
-		FEAC6605215528620027A439 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAC6601215528620027A439 /* libopencv_imgproc.3.4.1.dylib */; };
 		FEAC660D21552ECB0027A439 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC660B21552ECB0027A439 /* matrix.cpp */; };
 		FEAC661221553DB90027A439 /* dataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC661021553DB90027A439 /* dataSet.cpp */; };
 		FEAC662A215552250027A439 /* imageDataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC6628215552250027A439 /* imageDataSet.cpp */; };
 		FEAC662F215648040027A439 /* wMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC662D215648040027A439 /* wMatrix.cpp */; };
 		FEAC663D21565EA60027A439 /* distortedSignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC663B21565EA60027A439 /* distortedSignal.cpp */; };
 		FEAC664221566FF30027A439 /* neuronet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEAC664021566FF30027A439 /* neuronet.cpp */; };
+		FEF9964321583A7C0031AD72 /* libopencv_core.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF9964221583A7C0031AD72 /* libopencv_core.3.4.2.dylib */; };
+		FEF9964721583AC60031AD72 /* libopencv_imgcodecs.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF9964421583AC60031AD72 /* libopencv_imgcodecs.3.4.2.dylib */; };
+		FEF9964821583AC60031AD72 /* libopencv_imgproc.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF9964521583AC60031AD72 /* libopencv_imgproc.3.4.2.dylib */; };
+		FEF9964921583AC60031AD72 /* libopencv_highgui.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF9964621583AC60031AD72 /* libopencv_highgui.3.4.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +71,10 @@
 		FEAC663C21565EA60027A439 /* distortedSignal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = distortedSignal.hpp; sourceTree = "<group>"; };
 		FEAC664021566FF30027A439 /* neuronet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = neuronet.cpp; sourceTree = "<group>"; };
 		FEAC664121566FF30027A439 /* neuronet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = neuronet.hpp; sourceTree = "<group>"; };
+		FEF9964221583A7C0031AD72 /* libopencv_core.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_core.3.4.2.dylib; sourceTree = "<group>"; };
+		FEF9964421583AC60031AD72 /* libopencv_imgcodecs.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_imgcodecs.3.4.2.dylib; sourceTree = "<group>"; };
+		FEF9964521583AC60031AD72 /* libopencv_imgproc.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_imgproc.3.4.2.dylib; sourceTree = "<group>"; };
+		FEF9964621583AC60031AD72 /* libopencv_highgui.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_highgui.3.4.2.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEAC6602215528620027A439 /* libopencv_core.3.4.1.dylib in Frameworks */,
-				FEAC6603215528620027A439 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
-				FEAC6604215528620027A439 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
-				FEAC6605215528620027A439 /* libopencv_imgproc.3.4.1.dylib in Frameworks */,
+				FEF9964721583AC60031AD72 /* libopencv_imgcodecs.3.4.2.dylib in Frameworks */,
+				FEF9964821583AC60031AD72 /* libopencv_imgproc.3.4.2.dylib in Frameworks */,
+				FEF9964921583AC60031AD72 /* libopencv_highgui.3.4.2.dylib in Frameworks */,
+				FEF9964321583A7C0031AD72 /* libopencv_core.3.4.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +125,10 @@
 		FEAC65FD215528610027A439 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEF9964621583AC60031AD72 /* libopencv_highgui.3.4.2.dylib */,
+				FEF9964421583AC60031AD72 /* libopencv_imgcodecs.3.4.2.dylib */,
+				FEF9964521583AC60031AD72 /* libopencv_imgproc.3.4.2.dylib */,
+				FEF9964221583A7C0031AD72 /* libopencv_core.3.4.2.dylib */,
 				FEAC65FE215528620027A439 /* libopencv_core.3.4.1.dylib */,
 				FEAC65FF215528620027A439 /* libopencv_highgui.3.4.1.dylib */,
 				FEAC6600215528620027A439 /* libopencv_imgcodecs.3.4.1.dylib */,
@@ -427,6 +435,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/opencv/3.4.1_5/lib,
+					/usr/local/Cellar/opencv/3.4.2/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -441,6 +450,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/opencv/3.4.1_5/lib,
+					/usr/local/Cellar/opencv/3.4.2/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
