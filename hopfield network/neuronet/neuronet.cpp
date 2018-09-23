@@ -64,6 +64,7 @@ void neuronet::ranNV() {
         y_prev[i] = ds.data()[i];
     }
     while (ToObtainThePercentageOfMatches(y_prev, y_t) <= 90) { // пока количество совпадений не дойдёт до 90
+        y_prev = y_t; // записываем предыдущее состояние.
         y_t = activation(y_prev); // перезапускаем функцию активации
     }
     resultVector = convertToBiPolarVector(y_t);
