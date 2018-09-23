@@ -29,7 +29,7 @@ distortedSignal::distortedSignal(std::string filePath) {
 }
 
 void distortedSignal::toDistortTheSignal() { // искажение изображения
-    int distans = static_cast<int>(matrixInLineInBipolarForm.size()/10); // шаг
+    int distans = static_cast<int>(matrixInLineInBipolarForm.size()/20); // шаг
     std::mt19937 gen(static_cast<int>(time(0))); // генератор случайных чисел с ядром случайности
     std::uniform_int_distribution<> uid(0, distans); // задаём промежуток.
     for (int i = 0; i < matrixInLineInBipolarForm.size(); i+=distans) { // идём вдоль вектора
