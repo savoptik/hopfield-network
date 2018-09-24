@@ -28,6 +28,13 @@ public:
      @param dirPath путь к папке с результатами
      */
     void exportresult(std::string dirPath);
+    /**
+     выводит матрицу W до зададнных границ
+
+     @param i Количество выводимых строк
+     @param j Количество выводимых столбцов
+     */
+    void outWM(int i, int j);
 private:
     matrix xm; // x матрица
     wMatrix wm; // w Матрица
@@ -39,7 +46,7 @@ private:
      @param y_prev y_t-1
      @return y_t
      */
-    std::vector<double> activation(std::vector<double> y_prev);
+    std::vector<double> activation(std::vector<int> y_prev);
     /**
      Метод получает два вектора и вычисляет процент совпадений.
 
@@ -47,7 +54,7 @@ private:
      @param y_t значение y на текущей итерации
      @return процент совпадений.
      */
-    int ToObtainThePercentageOfMatches(std::vector<double> y_prev, std::vector<double> y_t);
+    int ToObtainThePercentageOfMatches(std::vector<int> y_prev, std::vector<int> y_t);
     /**
      метод превращае вектор даблов в вектор с биполярными значениями.
 

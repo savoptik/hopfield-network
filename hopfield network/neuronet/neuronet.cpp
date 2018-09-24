@@ -15,7 +15,7 @@ neuronet::neuronet(matrix xMat, wMatrix wMat, distortedSignal dSignal) {
     ds = dSignal;
 }
 
-std::vector<double> neuronet::activation(std::vector<double> y_prev) {
+std::vector<double> neuronet::activation(std::vector<int> y_prev) {
     // вектор, который будет возвращён
     std::vector<double> y_t;
     // выделяем память
@@ -29,15 +29,14 @@ std::vector<double> neuronet::activation(std::vector<double> y_prev) {
     return y_t;
 }
 
-int neuronet::ToObtainThePercentageOfMatches(std::vector<double> y_prev, std::vector<double> y_t) {
-    // переводим векторы double в биполярные векторы
+int neuronet::ToObtainThePercentageOfMatches(std::vector<int> y_prev, std::vector<int> y_t) {
     int coincidences = 0;
-    std::vector<int> v1 = convertToBiPolarVector(y_prev);
-    std::vector<int> v2 = convertToBiPolarVector(y_t);
     for (int i = 0; i < y_prev.size(); i++) { // проходим вдоль векторов
-        coincidences = v1[i] == v2[i]? coincidences+1: coincidences; // считаем совпадения
+        coincidences = y_t[i] == y_prev[i]? coincidences+1: coincidences; // считаем совпадения
     }
-    return coincidences * 100 / y_t.size(); // возвращаем в процентах
+    int res = coincidences * 100 / y_t.size();
+    std::cout << "Процент совпадений " << res << std::endl;
+    return res; // возвращаем в процентах
 }
 
 std::vector<int> neuronet::convertToBiPolarVector(std::vector<double> vec) {
@@ -55,19 +54,17 @@ std::vector<int> neuronet::convertToBiPolarVector(std::vector<double> vec) {
 
 void neuronet::ranNV() {
     // объявляем вектора
-    std::vector<double> y_t;
+    std::vector<int> y_t;
     y_t.resize(ds.data().size());
-    std::vector<double> y_prev;
-    y_prev.resize(y_t.size());
-    // поскольку искажённое изображение прибывает в int грубо переписываем его в double
-    for (int i = 0; i < y_prev.size(); i++) {
-        y_prev[i] = ds.data()[i];
-    }
+    std::vector<int> y_prev = ds.data();
+    int nI = 0;
     while (ToObtainThePercentageOfMatches(y_prev, y_t) <= 90) { // пока количество совпадений не дойдёт до 90
         y_prev = y_t; // записываем предыдущее состояние.
-        y_t = activation(y_prev); // перезапускаем функцию активации
+        y_t = convertToBiPolarVector(activation(y_prev)); // перезапускаем функцию активации
+        nI++;
     }
-    resultVector = convertToBiPolarVector(y_t);
+    std::cout << "Количество итераций: " << nI << std::endl;
+    resultVector = y_t;
 }
 
 void neuronet::exportresult(std::string dirPath) { 
@@ -75,9 +72,9 @@ void neuronet::exportresult(std::string dirPath) {
     // заполняем матрицу изображения
     for (int i = 0; i < img.rows * img.cols; i++) {
         if (xm.data()[i] > 0) {
-            img.at<uchar>(i) = 255;
+            img.at<uchar>(i) = 1;
         } else if (xm.data()[i] < 0) {
-            img.at<uchar>(i) = 0;
+            img.at<uchar>(i) = 255;
         } else {
             img.at<uchar>(i) = 128;
         }
@@ -85,3 +82,14 @@ void neuronet::exportresult(std::string dirPath) {
     dirPath = dirPath + "result.jpg"; // дополняем полученный путь именем файла
     cv::imwrite(dirPath, img); // пишем файл на диск
 }
+
+void neuronet::outWM(int i, int j) { 
+    for (int r = 0; r < i; r++) {
+        for (int c = 0; c < j; c++) {
+            std::cout << wm.at(r, c) << " ";
+        }
+        std::cout << std::endl;
+    }
+    
+}
+

@@ -46,9 +46,9 @@ void imageDataSet::generaitInLineForm() {
         // идём вдоль линеризованного изображения
         for (int j = 0; j < (setImages[i].rows * setImages[i].cols); j++) {
             // если значение равно нулю, записываем -1
-            if (setImages[i].at<uchar>(j) == 0) ilfMatrix.data()[ilfIndex] = -1;
+            if (setImages[i].at<uchar>(j) == 0) ilfMatrix.data()[ilfIndex] = 1;
             // иначе записываем 1
-            else ilfMatrix.data()[ilfIndex] = 1;
+            else ilfMatrix.data()[ilfIndex] = -1;
             // наращиваем общий индекс
             ilfIndex++;
         }
