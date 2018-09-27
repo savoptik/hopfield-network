@@ -44,7 +44,6 @@ void neuronet::copyLToR(std::vector<int> &v1, std::vector<int> &v2) {
     }
 }
 
-
 void neuronet::activation(std::vector<double>& vec, std::vector<int>& outVec) {
     outVec.resize(vec.size());
     for (int i = 0; i < vec.size(); i++) { // обходим вектор
@@ -87,7 +86,7 @@ void neuronet::ranNV() {
 }
 
 void neuronet::exportresult(std::string dirPath) { 
-    cv::Mat img(10, 10, CV_8UC1);
+    cv::Mat img(100, 100, CV_8UC1);
     // заполняем матрицу изображения
     for (int i = 0; i < img.rows * img.cols; i++) {
         if (xm.data()[i] > 0) {
@@ -110,4 +109,18 @@ void neuronet::outWM(int i, int j) {
         std::cout << std::endl;
     }
 }
+
+int neuronet::ToDetermineTheNumberOfClassImage() { 
+    int ind = -1, matchPercentage = 0;
+    xm.generaitInMatrixForm();
+    for (int i = 0; i < xm.rows(); i++) {
+        int p = ToObtainThePercentageOfMatches(resultVector, xm.getMatrixInMatrixForm()[i]);
+        if (p > matchPercentage) {
+            matchPercentage = p;
+            ind = i;
+        }
+    }
+    return ind;
+}
+
 

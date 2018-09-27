@@ -37,3 +37,22 @@ matrix::matrix(int rows, int cols) {
     // выделяем память
     matrixInLine.resize(mSize);
 }
+
+
+void matrix::generaitInMatrixForm() {
+    if (matrixInLine.size() == 0) {
+        return;
+    }
+    matrixInMatrixForm.resize(rows());
+    for (int i = 0; i < matrixInMatrixForm.size(); i++) {
+        for (int j = 0; j < cols(); j++) {
+            matrixInMatrixForm[i].resize(cols());
+            matrixInMatrixForm[i][j] = at(i, j);
+        }
+    }
+}
+
+std::vector<std::vector<int> > &matrix::getMatrixInMatrixForm() { 
+    return matrixInMatrixForm;
+}
+

@@ -15,7 +15,7 @@ distortedSignal::distortedSignal(std::string filePath) {
     // загружаем изображение
     cv::Mat img = cv::imread(filePath, cv::IMREAD_GRAYSCALE);
     cv::threshold(img, img, 128, 255, cv::THRESH_OTSU); // выполняем бинаризацию
-    cv::resize(img, img, cv::Size(10, 10)); // уменьшаем масштаб изображения
+    cv::resize(img, img, cv::Size(100, 100)); // уменьшаем масштаб изображения
     int size = img.rows * img.cols; // вычисляем размер
     matrixInLineInBipolarForm.resize(size); // выделяем память
     // выполняем биполяризацию

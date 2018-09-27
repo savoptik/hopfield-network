@@ -35,6 +35,7 @@ public:
      @param j Количество выводимых столбцов
      */
     void outWM(int i, int j);
+    int ToDetermineTheNumberOfClassImage();
 private:
     matrix xm; // x матрица
     wMatrix wm; // w Матрица

@@ -34,5 +34,9 @@ int main(int argc, const char * argv[]) {
     // запускаем матрицу в работу
      nt.ranNV();
     nt.exportresult(argv[3]);
+    int index = nt.ToDetermineTheNumberOfClassImage();
+    if (index >= 0) {
+        std::cout << "Искомое изображение " << ds.getFileList()[index] << std::endl;
+    }
     return 0;
 }

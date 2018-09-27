@@ -20,7 +20,7 @@ imageDataSet::imageDataSet(std::string dirPath, dataSet ds) {
         // бинаризуем изображение.
         cv::threshold(img, img, 128, 255, cv::THRESH_OTSU);
         // уменьшаем масштаб
-        cv::resize(img, img, cv::Size(10, 10));
+        cv::resize(img, img, cv::Size(100, 100));
         // забираем изображение.
         setImages[i] = img;
     }
@@ -55,3 +55,4 @@ void imageDataSet::generaitInLineForm() {
     }
     xMat = ilfMatrix; // записываем полученную матрицу в поле класса
 }
+

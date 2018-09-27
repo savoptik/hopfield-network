@@ -48,9 +48,12 @@ public:
      @return размер вектора линеризованной матрицы.
      */
     int size(); // метод возвращает размер матрицы.
+    void generaitInMatrixForm();
+    std::vector<std::vector<int>>& getMatrixInMatrixForm();
 protected:
     std::vector<int> matrixInLine; // поле хранит в себе линеризованную матрицу.
     int mHaid, mWits, mSize; // поля высоты, ширины и размера матрицы.
+    std::vector<std::vector<int>> matrixInMatrixForm;
 };
 
 #endif /* matrix_hpp */
