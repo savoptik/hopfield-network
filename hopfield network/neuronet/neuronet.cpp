@@ -16,7 +16,6 @@ neuronet::neuronet(matrix& xMat, wMatrix& wMat, distortedSignal& dSignal) {
 }
 
 void neuronet::prod(std::vector<int>& y_prev, std::vector<double>& y_t) {
-    // вектор, который будет возвращён
     // выделяем память
     y_t.resize(y_prev.size());
     // обходим матрицу
@@ -51,7 +50,7 @@ void neuronet::activation(std::vector<double>& vec, std::vector<int>& outVec) {
     for (int i = 0; i < vec.size(); i++) { // обходим вектор
         if (vec[i] > 0) { // если значение положительно?
             outVec[i] = 1; // записываем единицу
-        } else if (vec[i] <= 0) { // если отрицательное
+        } else if (vec[i] < 0) { // если отрицательное
             outVec[i] = -1; // записываем -1
     }
 }
@@ -70,7 +69,19 @@ void neuronet::ranNV() {
         prod(y_prev, timeVec);
         activation(timeVec, y_t);
         nI++;
-    } while (ToObtainThePercentageOfMatches(y_prev, y_t) <= 90);
+/*        for (int i = 0; i < 10; i++) {
+            std::cout << y_t[i] << " ";
+        }
+        std::cout << std::endl;
+        for (int i = 0; i < 10; i++) {
+            std::cout << y_prev[i] << " ";
+        }
+        std::cout << std::endl;
+        for (int i = 0; i < 10; i++) {
+            std::cout << timeVec[i] << " ";
+        }
+        std::cout << std::endl; */
+    } while (ToObtainThePercentageOfMatches(y_prev, y_t) <= 99);
     std::cout << "количество итераций " << nI << std::endl;
     resultVector = y_t;
 }
