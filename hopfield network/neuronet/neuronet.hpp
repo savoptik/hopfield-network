@@ -17,7 +17,7 @@
 
 class neuronet {
 public:
-    neuronet(matrix xMat, wMatrix wMat, distortedSignal dSignal); // конструктор перепишет внутрь себя полученные данные и освободит память.
+    neuronet(matrix& xMat, wMatrix& wMat, distortedSignal& dSignal); // конструктор перепишет внутрь себя полученные данные и освободит память.
     /**
      Запуск работы нейросети.
      */
@@ -40,28 +40,10 @@ private:
     wMatrix wm; // w Матрица
     distortedSignal ds; // искажённый сигнал.
     std::vector<int> resultVector; // результирующий вектор.
-    /**
-     функция активации выполняет поиск yt
-
-     @param y_prev y_t-1
-     @return y_t
-     */
-    std::vector<double> activation(std::vector<int> y_prev);
-    /**
-     Метод получает два вектора и вычисляет процент совпадений.
-
-     @param y_prev значение y на предыдущей итерации
-     @param y_t значение y на текущей итерации
-     @return процент совпадений.
-     */
-    int ToObtainThePercentageOfMatches(std::vector<int> y_prev, std::vector<int> y_t);
-    /**
-     метод превращае вектор даблов в вектор с биполярными значениями.
-
-     @param vec вектор даблов
-     @return биполярный вектор.
-     */
-    std::vector<int> convertToBiPolarVector(std::vector<double> vec);
+    void prod(std::vector<int>& y_prev, std::vector<double>& y_t);
+    int ToObtainThePercentageOfMatches(std::vector<int>& y_prev, std::vector<int>& y_t);
+    void activation(std::vector<double>& vec, std::vector<int>& outVec);
+    void copyLToR(std::vector<int>& v1, std::vector<int>& v2);
 };
 
 #endif /* neuronet_hpp */

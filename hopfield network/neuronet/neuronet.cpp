@@ -8,16 +8,15 @@
 
 #include "neuronet.hpp"
 
-neuronet::neuronet(matrix xMat, wMatrix wMat, distortedSignal dSignal) {
+neuronet::neuronet(matrix& xMat, wMatrix& wMat, distortedSignal& dSignal) {
     // затаскиваем в себя значения
     xm = xMat;
     wm = wMat;
     ds = dSignal;
 }
 
-std::vector<double> neuronet::activation(std::vector<int> y_prev) {
+void neuronet::prod(std::vector<int>& y_prev, std::vector<double>& y_t) {
     // вектор, который будет возвращён
-    std::vector<double> y_t;
     // выделяем память
     y_t.resize(y_prev.size());
     // обходим матрицу
@@ -26,44 +25,53 @@ std::vector<double> neuronet::activation(std::vector<int> y_prev) {
                 y_t[i] += wm.at(i, j) * y_prev[j]; // вычисляем значения вектора
         }
     }
-    return y_t;
 }
 
-int neuronet::ToObtainThePercentageOfMatches(std::vector<int> y_prev, std::vector<int> y_t) {
+int neuronet::ToObtainThePercentageOfMatches(std::vector<int>& y_prev, std::vector<int>& y_t) {
     int coincidences = 0;
     for (int i = 0; i < y_prev.size(); i++) { // проходим вдоль векторов
         coincidences = y_t[i] == y_prev[i]? coincidences+1: coincidences; // считаем совпадения
     }
     int res = coincidences * 100 / y_t.size();
-    std::cout << "Процент совпадений " << res << std::endl;
+//    std::cout << "Процент совпадений " << res << std::endl;
     return res; // возвращаем в процентах
 }
 
-std::vector<int> neuronet::convertToBiPolarVector(std::vector<double> vec) {
-    std::vector<int> res;
-    res.resize(vec.size());
-    for (int i = 0; i < vec.size(); i++) { // обходим вектор
-        if (vec[i] > 0) { // если значение положительно?
-            res[i] = 1; // записываем единицу
-        } else if (vec[i] < 0) { // если отрицательное
-            res[i] = -1; // записываем -1
-        } else res[i] = 0; // иначе ноль
+void neuronet::copyLToR(std::vector<int> &v1, std::vector<int> &v2) { 
+    if (v1.size() == v2.size()) {
+        for (int i = 0; i < v1.size(); i++) {
+            v2[i] = v1[i];
+        }
     }
-    return res;
 }
 
+
+void neuronet::activation(std::vector<double>& vec, std::vector<int>& outVec) {
+    outVec.resize(vec.size());
+    for (int i = 0; i < vec.size(); i++) { // обходим вектор
+        if (vec[i] > 0) { // если значение положительно?
+            outVec[i] = 1; // записываем единицу
+        } else if (vec[i] <= 0) { // если отрицательное
+            outVec[i] = -1; // записываем -1
+    }
+}
+}
+    
 void neuronet::ranNV() {
-    // объявляем вектора
     std::vector<int> y_t;
     y_t.resize(ds.data().size());
     std::vector<int> y_prev = ds.data();
+    std::vector<double> timeVec;
+    timeVec.resize(y_t.size());
     int nI = 0;
-    while (ToObtainThePercentageOfMatches(y_prev, y_t) <= 90) { // пока количество совпадений не дойдёт до 90
-        y_prev = y_t; // записываем предыдущее состояние.
-        y_t = convertToBiPolarVector(activation(y_prev)); // перезапускаем функцию активации
+    copyLToR(y_prev, y_t);
+    do {
+        copyLToR(y_t, y_prev);
+        prod(y_prev, timeVec);
+        activation(timeVec, y_t);
         nI++;
-    }
-    std::cout << "Количество итераций: " << nI << std::endl;
+    } while (ToObtainThePercentageOfMatches(y_prev, y_t) <= 90);
+    std::cout << "количество итераций " << nI << std::endl;
     resultVector = y_t;
 }
 
@@ -90,6 +98,5 @@ void neuronet::outWM(int i, int j) {
         }
         std::cout << std::endl;
     }
-    
 }
 
