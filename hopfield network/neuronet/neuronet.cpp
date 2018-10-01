@@ -61,25 +61,12 @@ void neuronet::ranNV() {
     std::vector<int> y_prev = ds.data();
     std::vector<double> timeVec;
     timeVec.resize(y_t.size());
-    int nI = 0;
-    copyLToR(y_prev, y_t);
+    int nI = 0;    copyLToR(y_prev, y_t);
     do {
         copyLToR(y_t, y_prev);
         prod(y_prev, timeVec);
         activation(timeVec, y_t);
         nI++;
-/*        for (int i = 0; i < 10; i++) {
-            std::cout << y_t[i] << " ";
-        }
-        std::cout << std::endl;
-        for (int i = 0; i < 10; i++) {
-            std::cout << y_prev[i] << " ";
-        }
-        std::cout << std::endl;
-        for (int i = 0; i < 10; i++) {
-            std::cout << timeVec[i] << " ";
-        }
-        std::cout << std::endl; */
     } while (ToObtainThePercentageOfMatches(y_prev, y_t) <= 99);
     std::cout << "количество итераций " << nI << std::endl;
     resultVector = y_t;
@@ -89,9 +76,9 @@ void neuronet::exportresult(std::string dirPath) {
     cv::Mat img(100, 100, CV_8UC1);
     // заполняем матрицу изображения
     for (int i = 0; i < img.rows * img.cols; i++) {
-        if (xm.data()[i] > 0) {
+        if (resultVector[i] > 0) {
             img.at<uchar>(i) = 1;
-        } else if (xm.data()[i] < 0) {
+        } else if (resultVector[i] < 0) {
             img.at<uchar>(i) = 255;
         } else {
             img.at<uchar>(i) = 128;

@@ -20,7 +20,7 @@ distortedSignal::distortedSignal(std::string filePath) {
     matrixInLineInBipolarForm.resize(size); // выделяем память
     // выполняем биполяризацию
     for (int i = 0; i < size; i++) {
-        if (img.at<uchar>(i) == 0) {
+        if (img.at<uchar>(i) == 255) {
             matrixInLineInBipolarForm[i] = -1;
         } else {
             matrixInLineInBipolarForm[i] = 1;
