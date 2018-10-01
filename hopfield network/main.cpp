@@ -33,7 +33,9 @@ int main(int argc, const char * argv[]) {
     neuronet nt(xm, wm, dSignal);
     // запускаем матрицу в работу
      nt.ranNV();
+    // Выводим на диск результат работы сети
     nt.exportresult(argv[3]);
+    // выводим совпадение с эталоном, если оно вообще возможно.
     int index = nt.ToDetermineTheNumberOfClassImage();
     if (index >= 0) {
         std::cout << "Искомое изображение " << ds.getFileList()[index] << std::endl;
